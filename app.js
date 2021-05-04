@@ -3,7 +3,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-var api = require('./routes/api');
+// var api = require('./routes/api');
 
 
 var app = express();
@@ -14,7 +14,6 @@ var app = express();
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
-// app.use('/books', express.static(path.join(__dirname, 'dist')));
 
 app.use('/', express.static(path.join(__dirname, 'dist')));
 app.use('/home', express.static(path.join(__dirname, 'dist')));
@@ -25,7 +24,7 @@ app.use('/reports', express.static(path.join(__dirname, 'dist')));
 app.use('/admin-report-page', express.static(path.join(__dirname, 'dist')));
 app.use('/admin-users-page', express.static(path.join(__dirname, 'dist')));
 app.use('/admin-databases-page', express.static(path.join(__dirname, 'dist')));
-app.use('/api', api);
+// app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

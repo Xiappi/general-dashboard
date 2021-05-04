@@ -1,7 +1,7 @@
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
-const privateKey = fs.readFileSync('jwt.key');
-const publicKey = fs.readFileSync('jwt.key.pub');
+const privateKey = fs.readFileSync('./backend/jwt.key');
+const publicKey = fs.readFileSync('./backend/jwt.key.pub');
 const signOptions = { algorithm: 'RS256', expiresIn: '3h' }; // tokens expire 3 hours after creation
 const verifyOptions = { algorithms: ['RS256'] };
 

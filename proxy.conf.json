@@ -1,41 +1,8 @@
 {
-  "/posts": {
-    "target": "http://localhost:5000",
-    "secure": true,
-    "logLevel": "debug",
-    "pathRewrite": {
-      "^/posts": ""
-    },
-    "changeOrigin": true
-    },
+  "/api/*": {
+    "target": "http://localhost:4201",
+    "secure": false,
+    "logLevel": "debug"
+    }
 
-  "/gets": {
-    "target": "http://localhost:5000",
-    "secure": true,
-    "logLevel": "debug",
-    "pathRewrite": {
-      "^/gets": ""
-    },
-    "changeOrigin": true
-  },
-
-  "/puts": {
-    "target": "http://localhost:5000",
-    "secure": true,
-    "logLevel": "debug",
-    "pathRewrite": {
-      "^/puts": ""
-    },
-    "changeOrigin": true
-  },
-
-  "/deletes": {
-    "target": "http://localhost:5000",
-    "secure": true,
-    "logLevel": "debug",
-    "pathRewrite": {
-      "^/deletes": ""
-    },
-    "changeOrigin": true
-  }
 }
