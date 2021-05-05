@@ -1,18 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { EmployeesService } from '../services/employees.service';
-import { Chart } from 'chart.js';
-import {Router} from '@angular/router';
-import {AuthService} from '../auth.service';
 import {ChartFactoryService} from '../services/chart-factory.service';
-import {baseOptions, ChartInfo, WidgetInfo, Table} from '../services/Chart';
-import {SequelizeService} from '../services/sequelize.service';
-import {DatabaseService} from '../services/database-connection.service';
+import {WidgetInfo} from '../services/Chart';
 import {ReportsService} from '../services/reports.service';
 import {UsersService} from '../services/users.service';
-import {Report} from '../../models/report';
 import {UserGeneratedReport} from '../../models/userGeneratedReport';
-import { User } from 'src/models/users';
 
 @Component({
   selector: 'app-userhome',

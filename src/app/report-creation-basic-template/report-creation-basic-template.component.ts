@@ -5,7 +5,7 @@ import {Json} from 'sequelize/types/lib/utils';
 import {Parameter} from '../../models/report';
 import {col} from 'sequelize';
 import {Database} from '../../models/database';
-import {DatabaseService} from '../services/database-connection.service';
+import {DatabaseConnectionsService} from '../services/database-connections.service';
 import {ReportsService} from '../services/reports.service';
 
 @Component({
@@ -28,7 +28,7 @@ export class ReportCreationBasicTemplateComponent implements OnInit {
   reportDisplayName: string;
 
   constructor(private reportService: ReportsService,
-              private dbService: DatabaseService,
+              private dbService: DatabaseConnectionsService,
               private seq: SequelizeService,
               private modalService: NgbModal) { }
 

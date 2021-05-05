@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {AbstractControl, FormControl, FormGroup} from '@angular/forms';
 import { Validators } from '@angular/forms';
-import {DatabaseService} from '../services/database-connection.service';
+import {DatabaseConnectionsService} from '../services/database-connections.service';
 import {AuthService} from '../auth.service';
 
 @Component({
@@ -12,7 +12,7 @@ import {AuthService} from '../auth.service';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private router: Router, private conn: DatabaseService, private auth: AuthService) {
+  constructor(private router: Router, private conn: DatabaseConnectionsService, private auth: AuthService) {
   }
 
   /**

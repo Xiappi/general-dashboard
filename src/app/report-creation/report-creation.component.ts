@@ -2,13 +2,12 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {WidgetInfo, WidgetTypes} from '../services/Chart';
 import {Report} from '../../models/report';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {EmployeesService} from '../services/employees.service';
 import {ChartFactoryService} from '../services/chart-factory.service';
 import {ReportsService} from '../services/reports.service';
 import {FormControl, FormGroup} from '@angular/forms';
 import {UsersService} from '../services/users.service';
 import {Observable, Subscription} from 'rxjs';
-import {DatabaseService} from '../services/database-connection.service';
+import {DatabaseConnectionsService} from '../services/database-connections.service';
 import { Database } from 'src/models/database';
 import {AuthService} from '../auth.service';
 
@@ -35,11 +34,10 @@ export class ReportCreationComponent implements OnInit {
 
   constructor(
     private modalService: NgbModal,
-    private employeeService: EmployeesService,
     private chartFactory: ChartFactoryService,
     private reportsService: ReportsService,
     private userService: UsersService,
-    private dbService: DatabaseService,
+    private dbService: DatabaseConnectionsService,
     private auth: AuthService){}
 
 
@@ -89,7 +87,7 @@ export class ReportCreationComponent implements OnInit {
     if ((this.isFormCompleted = !values.includes('')) === true && this.selectedChartType) {
       this.isFormCompleted = true;
     }
-    else {this.isFormCompleted = false;}
+    else { this.isFormCompleted = false; }
 
     // close modal if form is completed
     if (this.isFormCompleted){

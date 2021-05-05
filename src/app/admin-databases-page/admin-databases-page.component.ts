@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../auth.service';
 import {Router} from '@angular/router';
-import {DatabaseService} from '../services/database-connection.service';
+import {DatabaseConnectionsService} from '../services/database-connections.service';
 import {Database} from '../../models/database';
 import {SequelizeService} from '../services/sequelize.service';
 
@@ -14,7 +14,7 @@ export class AdminDatabasesPageComponent implements OnInit {
 
   databases: Database[];
   constructor(public auth: AuthService,
-              public conn: DatabaseService,
+              public conn: DatabaseConnectionsService,
               private router: Router,
               private seqService: SequelizeService) {
 

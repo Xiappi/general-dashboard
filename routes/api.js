@@ -9,7 +9,7 @@ const router = express.Router();
     {
       host: '127.0.0.1',
       dialect: 'mysql',
-      port: 34299,
+      port: 16302,
       pool: {
         max: 10,
         min: 0,
